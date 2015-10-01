@@ -71,43 +71,44 @@ Finally, the theorised algorithm will be implemented and deployed onto the test 
 for demonstration and evaluation, including making estimates of the energy and power consumption
 compared to existing Service oriented Architecture approaches.
 
+\newpage
 \begin{landscape}
 
 \begin{ganttchart}[
 		hgrid,
 		vgrid,
 		x unit=4mm,
+		y unit chart=.7cm,
 		time slot format=isodate
 	]{2015-09-28}{2015-11-15}
 	\gantttitlecalendar{month=shortname, week} \\
 
-	\ganttgroup{Project Brief}{2015-09-30}{2015-10-09} \\
 	\ganttbar{Agree Project Brief}{2015-09-30}{2015-10-08} \\
-	\ganttlinkedmilestone{Project Brief Due}{2015-10-09} \ganttnewline[thick]
+	\ganttlinkedmilestone{Project Brief Due}{2015-10-09} \\
 
-	\ganttgroup{Hardware Work}{2015-10-05}{2015-11-01} \\
-	\ganttbar{Aquire Lab Desk}{2015-10-05}{2015-10-12} \\
+	\ganttbar{Seminar Preparation}{2015-10-19}{2015-10-22} \\
+	\ganttlinkedmilestone{Progress Seminar 1}{2015-10-23} \ganttnewline[ultra thick, red]
+
+	\ganttgroup{Hardware Work}{2015-10-02}{2015-11-01} \\
+	\ganttbar{Aquire Lab Desk}{2015-10-02}{2015-10-12} \\
 	\ganttbar{Aquire FPGA Board}{2015-10-05}{2015-10-10} \\
-	\ganttbar{Do some work and shit}{2015-10-13}{2015-11-01} \ganttnewline[thick]
+	\ganttbar{Do some work and shit}{2015-10-13}{2015-11-01} \ganttnewline[ultra thick, red]
 
 	\ganttgroup{Algorithm Work}{2015-10-05}{2015-11-01} \\
 	\ganttbar{Background Research}{2015-10-05}{2015-10-25} \\
-	\ganttbar{Algorithm Design}{2015-10-12}{2015-11-01} \ganttnewline[thick]
+	\ganttbar{Algorithm Design}{2015-10-12}{2015-11-01} \ganttnewline[ultra thick, red]
 
 	\ganttgroup{Movement Data Study}{2015-10-05}{2015-10-25} \\
 	\ganttbar{Search for Volunteers}{2015-10-12}{2015-10-21} \\
 	\ganttbar{Apply for Ethics Approval}{2015-10-05}{2015-10-18} \\
-	\ganttlinkedbar{Collect Movement Data}{2015-10-19}{2015-10-25} \ganttnewline[thick]
-
-	\ganttgroup{Progree Seminar}{2015-10-19}{2015-10-23} \\
-	\ganttbar{Seminar Preparation}{2015-10-19}{2015-10-22} \\
-	\ganttmilestone{Progress Seminar 1}{2015-10-23}
+	\ganttlinkedbar{Collect Movement Data}{2015-10-19}{2015-10-25}
 \end{ganttchart}
 
 \begin{ganttchart}[
 		hgrid,
 		vgrid,
 		x unit=4mm,
+		y unit chart=.7cm,
 		time slot format=isodate
 	]{2015-11-16}{2016-01-03}
 	\gantttitlecalendar{month=shortname, week=8} \\
@@ -118,10 +119,11 @@ compared to existing Service oriented Architecture approaches.
 		bar top shift=0,
 		bar/.append style={fill=red, draw=red},
 		bar label font=\color{yellow}
-	]{Christmas Holidays}{2015-12-14}{2016-01-03} \\
+	]{Christmas Holidays}{2015-12-12}{2016-01-03} \\
 
-	\ganttmilestone{Progress Seminar 2}{2015-11-20} \\
-	\ganttlinkedbar{Changes}{2015-11-20}{2015-12-14} \\
+	\ganttbar{Seminar Preparation}{2015-11-16}{2015-11-19} \\
+	\ganttlinkedmilestone{Progress Seminar 2}{2015-11-20} \\
+	\ganttlinkedbar{Changes}{2015-11-20}{2015-12-11} \\
 	\ganttbar{Report Writing}{2015-12-14}{2016-01-03}
 
 \end{ganttchart}
@@ -130,6 +132,7 @@ compared to existing Service oriented Architecture approaches.
 		hgrid,
 		vgrid,
 		x unit=4mm,
+		y unit chart=.7cm,
 		time slot format=isodate
 	]{2016-01-04}{2016-02-21}
 	\gantttitlecalendar{month=shortname, week=16} \\
@@ -140,12 +143,19 @@ compared to existing Service oriented Architecture approaches.
 		bar top shift=0,
 		bar/.append style={fill=blue, draw=blue},
 		bar label font=\color{yellow}
-	]{Exams}{2016-01-11}{2016-01-23} \\
+	]{Exams}{2016-01-11}{2016-01-22} \\
 
-	\ganttmilestone{Report Due}{2016-01-28} \\
-	\ganttmilestone{Reflection Report}{2016-02-01} \\
-	\ganttmilestone{Poster and slides due}{2016-02-04} \\
-	\ganttmilestone{Final Presentation}{2016-02-20}
+	\ganttbar{}{2016-01-04}{2016-01-10}
+	\ganttbar{Report Writing}{2016-01-23}{2016-01-27} \\
+	\ganttlinkedmilestone{Report Due}{2016-01-28} \\
+
+	\ganttmilestone{Reflection Report Due}{2016-02-01} \\
+
+	\ganttbar{Poster and slides work}{2016-01-23}{2016-02-03} \\
+	\ganttlinkedmilestone{Poster and Slides Due}{2016-02-04} \\
+
+	\ganttbar{Presentation Preparation}{2016-02-08}{2016-02-19} \\
+	\ganttlinkedmilestone{Final Presentation}{2016-02-20}
 \end{ganttchart}
 
 \end{landscape}
