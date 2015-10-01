@@ -94,14 +94,17 @@ compared to existing Service oriented Architecture approaches.
 	\ganttbar{Aquire FPGA Board}{2015-10-05}{2015-10-10} \\
 	\ganttbar{Do some work and shit}{2015-10-13}{2015-11-01} \ganttnewline[ultra thick, red]
 
-	\ganttgroup{Algorithm Work}{2015-10-05}{2015-11-01} \\
-	\ganttbar{Background Research}{2015-10-05}{2015-10-25} \\
-	\ganttbar{Algorithm Design}{2015-10-12}{2015-11-01} \ganttnewline[ultra thick, red]
-
 	\ganttgroup{Movement Data Study}{2015-10-05}{2015-10-25} \\
 	\ganttbar{Search for Volunteers}{2015-10-12}{2015-10-21} \\
 	\ganttbar{Apply for Ethics Approval}{2015-10-05}{2015-10-18} \\
-	\ganttlinkedbar{Collect Movement Data}{2015-10-19}{2015-10-25}
+	\ganttlinkedbar{Collect Movement Data}{2015-10-19}{2015-10-25} \ganttnewline[ultra thick, red]
+
+	\ganttgroup{Algorithm Work}{2015-10-05}{2015-11-01} \\
+	\ganttbar{Background Research}{2015-10-05}{2015-10-25} \\
+	\ganttbar{Algorithm Design}{2015-10-19}{2015-11-15} \\
+	\ganttbar{Algoritm Implementation}{2015-11-02}{2015-11-15}
+
+	
 \end{ganttchart}
 
 \begin{ganttchart}[
@@ -123,7 +126,12 @@ compared to existing Service oriented Architecture approaches.
 
 	\ganttbar{Seminar Preparation}{2015-11-16}{2015-11-19} \\
 	\ganttlinkedmilestone{Progress Seminar 2}{2015-11-20} \\
-	\ganttlinkedbar{Changes}{2015-11-20}{2015-12-11} \\
+	
+	\ganttbar{Algorithm Implementation}{2015-11-16}{2015-11-29} \\
+	\ganttbar{Testing and Evaluation}{2015-11-16}{2015-12-09} \\
+
+	\ganttmilestone{Target Completion}{2015-12-09} \\
+
 	\ganttbar{Report Writing}{2015-12-14}{2016-01-03}
 
 \end{ganttchart}
