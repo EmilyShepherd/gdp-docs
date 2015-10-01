@@ -24,7 +24,7 @@
 ELEC6200 MEng Group Design Project \\
 Project Specification And Plan}
 \author{Group 2}
-\date{October 2015}
+\date{9 October 2015}
 
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
@@ -50,28 +50,27 @@ Project Specification And Plan}
 
 \textbf{Project Specification:}
 
-This project will research and develop a system for monitoring exercises performed by a human wearer,
-more specifically exercises performed to avoid suffering from deep vein thrombosis (DVT)
-e.g. http://www.virgin-atlantic.com/gb/en/travel-information/your-health/inflight-exercise.html.
-However, the additional constraint on this project is that the algorithms should be designed for
-execution on an ultra-low-power (a few uW) subthreshold ARM Cortex-M0+ currently being investigated
-at ARM Research. This requires that the algorithm can execute on a processor clocked at a few hundred
+This project will research and attempt to develop a suitable algorithm for identifying and
+monitoring excersies performed by a human wearer, for execution on an ultra-low-power
+(a few uW) subthreshold ARM Cortex-M0+, which is currently being investigated at ARM Research.
+This requires that the algorithm can execute on a processor clocked at a few hundred
 kHz and from limited memory.
 
-The project has a number of subtasks that need to be achieved (some of which can be performed concurrently):
-\begin{enumerate}
-\item Create a test platform by obtaining and synthesise the ARM DesignStart Cortex-M0 to an FPGA,
-and be able to clock it at frequencies from 100s of kHz to a few MHz, and a single memory (holding
-program and data) of 32 kB (capable of being enabled in 4kB blocks)
-\item Investigate existing algorithms and approaches for monitoring exercises/activities, and develop your own optimised algorithm(s) suitable for the target platform (note, you may have to consider an accuracy/power trade-off in doing this).
-\item Implement to allow demonstration and evaluation of the chosen approach(es), including making estimates of the energy/power consumption compared to existing SoA approaches.
-\end{enumerate}
+The project shall be split into three overlapping areas. The first task will be to effectively
+emulate the required environment, by creating a test platform from an ARM DesignStart Cortex-M0
+to an FPGA. This must be clocked at frequencies from 100s of kHz to a few MHz, and contain a
+single memory space of 32kB for use by both program code and variables. 
 
-You may also choose to use a COTS micro-controller development board for testing and development of the algorithm, if desired (and if manpower allows).
+Secondly, the project shall investigate existing algorithms and approaches for monitoring
+exercises and activities, and develop a algorithm optimsed for the excerises performed to avoid
+suffering from deep vein thrombosis
+\footnote{http://www.virgin-atlantic.com/gb/en/travel-information/your-health/inflight-exercise.html}
+and suitable for the target platform.
 
-As potential extensions, you may choose to look at 1) alternative algorithms that could increase accuracy or reduce power (lower frequency and memory use), 2) use of the system/platform to execute algorithms for other exercises/activities etc. As it is likely to involve human experiments/data, you may need to obtain ethical approval for the project as soon as possible.
+Finally, the theorised algorithm will be implemented and deployed onto the test platform, allowing
+for demonstration and evaluation, including making estimates of the energy and power consumption
+compared to existing Service oriented Architecture approaches.
 
-\newpage
 \begin{landscape}
 
 \begin{ganttchart}[
@@ -85,6 +84,11 @@ As potential extensions, you may choose to look at 1) alternative algorithms tha
 	\ganttgroup{Project Brief}{2015-09-30}{2015-10-09} \\
 	\ganttbar{Agree Project Brief}{2015-09-30}{2015-10-08} \\
 	\ganttlinkedmilestone{Project Brief Due}{2015-10-09} \ganttnewline[thick]
+
+	\ganttgroup{Hardware Work}{2015-10-05}{2015-11-01} \\
+	\ganttbar{Aquire Lab Desk}{2015-10-05}{2015-10-12} \\
+	\ganttbar{Aquire FPGA Board}{2015-10-05}{2015-10-10} \\
+	\ganttbar{Do some work and shit}{2015-10-13}{2015-11-01} \ganttnewline[thick]
 
 	\ganttgroup{Algorithm Work}{2015-10-05}{2015-11-01} \\
 	\ganttbar{Background Research}{2015-10-05}{2015-10-25} \\
@@ -129,6 +133,14 @@ As potential extensions, you may choose to look at 1) alternative algorithms tha
 		time slot format=isodate
 	]{2016-01-04}{2016-02-21}
 	\gantttitlecalendar{month=shortname, week=16} \\
+
+	\ganttbar[
+		inline,
+		bar height=1,
+		bar top shift=0,
+		bar/.append style={fill=blue, draw=blue},
+		bar label font=\color{yellow}
+	]{Exams}{2016-01-11}{2016-01-23} \\
 
 	\ganttmilestone{Report Due}{2016-01-28} \\
 	\ganttmilestone{Reflection Report}{2016-02-01} \\
