@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+
+%% DRAFT %%
+	\usepackage[printwatermark]{xwatermark}
+	\usepackage{xcolor}
+	\usepackage{graphicx}
+	\usepackage{tikz}
+
+	\newsavebox\mybox
+	\savebox\mybox{\tikz[color=red,opacity=0.2]\node{DRAFT};}
+	\newwatermark*[
+	  allpages,
+	  angle=45,
+	  scale=10,
+	  xpos=-30,
+	  ypos=15
+	]{\usebox\mybox}
+%% END DRAFT %%
+
+\title{School of Electronics And Computer Science \\
+ELEC6200 MEng Group Design Project \\
+Project Specification And Plan}
+\author{Group 2}
+\date{October 2015}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\maketitle
+
+\textbf{Title:} Ultra-low-power exercise monitoring applications for sub-threshold micro-controllers
+
+\textbf{Supervisors:} Dr Geoff Merrett and Dr Alex Weddell
+
+\textbf{Team Members:}
+\begin{itemize}
+    \item Emily Shepherd (ams2g11)
+    \item Mohit Gupta (mg8g12)
+    \item Toby Finch (tlf1g12)
+    \item Dan Playle (djap1g11)
+    \item Calin Pasat (cp10g12)
+\end{itemize}
+
+\textbf{Customer:} James Myers, ARM Research, Cambridge (James.Myers@arm.com)
+
+\textbf{Project Specification:}
+
+This project will research and develop a system for monitoring exercises performed by a human wearer,
+more specifically exercises performed to avoid suffering from deep vein thrombosis (DVT)
+e.g. http://www.virgin-atlantic.com/gb/en/travel-information/your-health/inflight-exercise.html.
+However, the additional constraint on this project is that the algorithms should be designed for
+execution on an ultra-low-power (a few uW) subthreshold ARM Cortex-M0+ currently being investigated
+at ARM Research. This requires that the algorithm can execute on a processor clocked at a few hundred
+kHz and from limited memory.
+
+The project has a number of subtasks that need to be achieved (some of which can be performed concurrently):
+\begin{enumerate}
+\item Create a test platform by obtaining and synthesise the ARM DesignStart Cortex-M0 to an FPGA,
+and be able to clock it at frequencies from 100s of kHz to a few MHz, and a single memory (holding
+program and data) of 32 kB (capable of being enabled in 4kB blocks)
+\item Investigate existing algorithms and approaches for monitoring exercises/activities, and develop your own optimised algorithm(s) suitable for the target platform (note, you may have to consider an accuracy/power trade-off in doing this).
+\item Implement to allow demonstration and evaluation of the chosen approach(es), including making estimates of the energy/power consumption compared to existing SoA approaches.
+\end{enumerate}
+
+You may also choose to use a COTS micro-controller development board for testing and development of the algorithm, if desired (and if manpower allows).
+
+As potential extensions, you may choose to look at 1) alternative algorithms that could increase accuracy or reduce power (lower frequency and memory use), 2) use of the system/platform to execute algorithms for other exercises/activities etc. As it is likely to involve human experiments/data, you may need to obtain ethical approval for the project as soon as possible.
+
+\newpage
+\begin{landscape}
+
+\begin{ganttchart}[
+		hgrid,
+		vgrid,
+		x unit=4mm,
+		time slot format=isodate
+	]{2015-09-28}{2015-11-15}
+	\gantttitlecalendar{month=shortname, week} \\
+
+	\ganttgroup{Project Brief}{2015-09-30}{2015-10-09} \\
+	\ganttbar{Agree Project Brief}{2015-09-30}{2015-10-08} \\
+	\ganttlinkedmilestone{Project Brief Due}{2015-10-09} \ganttnewline[thick]
+
+	\ganttgroup{Algorithm Work}{2015-10-05}{2015-11-01} \\
+	\ganttbar{Background Research}{2015-10-05}{2015-10-25} \\
+	\ganttbar{Algorithm Design}{2015-10-12}{2015-11-01} \ganttnewline[thick]
+
+	\ganttgroup{Movement Data Study}{2015-10-05}{2015-10-25} \\
+	\ganttbar{Search for Volunteers}{2015-10-12}{2015-10-21} \\
+	\ganttbar{Apply for Ethics Approval}{2015-10-05}{2015-10-18} \\
+	\ganttlinkedbar{Collect Movement Data}{2015-10-19}{2015-10-25} \ganttnewline[thick]
+
+	\ganttgroup{Progree Seminar}{2015-10-19}{2015-10-23} \\
+	\ganttbar{Seminar Preparation}{2015-10-19}{2015-10-22} \\
+	\ganttmilestone{Progress Seminar 1}{2015-10-23}
+\end{ganttchart}
+
+\begin{ganttchart}[
+		hgrid,
+		vgrid,
+		x unit=4mm,
+		time slot format=isodate
+	]{2015-11-16}{2016-01-03}
+	\gantttitlecalendar{month=shortname, week=8} \\
+
+	\ganttbar[
+		inline,
+		bar height=1,
+		bar top shift=0,
+		bar/.append style={fill=red, draw=red},
+		bar label font=\color{yellow}
+	]{Christmas Holidays}{2015-12-14}{2016-01-03} \\
+
+	\ganttmilestone{Progress Seminar 2}{2015-11-20} \\
+	\ganttlinkedbar{Changes}{2015-11-20}{2015-12-14} \\
+	\ganttbar{Report Writing}{2015-12-14}{2016-01-03}
+
+\end{ganttchart}
+
+\begin{ganttchart}[
+		hgrid,
+		vgrid,
+		x unit=4mm,
+		time slot format=isodate
+	]{2016-01-04}{2016-02-21}
+	\gantttitlecalendar{month=shortname, week=16} \\
+
+	\ganttmilestone{Report Due}{2016-01-28} \\
+	\ganttmilestone{Reflection Report}{2016-02-01} \\
+	\ganttmilestone{Poster and slides due}{2016-02-04} \\
+	\ganttmilestone{Final Presentation}{2016-02-20}
+\end{ganttchart}
+
+\end{landscape}
+
+\end{document}
