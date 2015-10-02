@@ -12,11 +12,11 @@
 	\newsavebox\mybox
 	\savebox\mybox{\tikz[color=red,opacity=0.2]\node{DRAFT};}
 	\newwatermark*[
-	  allpages,
-	  angle=45,
-	  scale=10,
-	  xpos=-30,
-	  ypos=15
+		allpages,
+		angle=45,
+		scale=10,
+		xpos=-30,
+		ypos=15
 	]{\usebox\mybox}
 %% END DRAFT %%
 
@@ -39,11 +39,11 @@ Project Specification And Plan}
 
 \textbf{Team Members:}
 \begin{itemize}
-    \item Emily Shepherd (ams2g11)
-    \item Mohit Gupta (mg8g12)
-    \item Toby Finch (tlf1g12)
-    \item Dan Playle (djap1g11)
-    \item Calin Pasat (cp10g12)
+	\item Emily Shepherd (ams2g11)
+	\item Mohit Gupta (mg8g12)
+	\item Toby Finch (tlf1g12)
+	\item Dan Playle (djap1g11)
+	\item Calin Pasat (cp10g12)
 \end{itemize}
 
 \textbf{Customer:} James Myers, ARM Research, Cambridge (James.Myers@arm.com)
@@ -64,7 +64,8 @@ single memory space of 32kB for use by both program code and variables.
 Secondly, the project shall investigate existing algorithms and approaches for monitoring
 exercises and activities, and develop a algorithm optimsed for the excerises performed to avoid
 suffering from deep vein thrombosis
-\footnote{For example: http://www.virgin-atlantic.com/gb/en/travel-information/your-health/inflight-exercise.html}
+\footnote{For example:
+http://www.virgin-atlantic.com/gb/en/travel-information/your-health/inflight-exercise.html}
 and suitable for the target platform.
 
 Finally, the theorised algorithm will be implemented and deployed onto the test platform, allowing
@@ -99,7 +100,7 @@ compared to existing Service oriented Architecture approaches.
 	\ganttbar{Apply for Ethics Approval}{2015-10-05}{2015-10-18} \\
 	\ganttlinkedbar{Collect Movement Data}{2015-10-19}{2015-10-25} \ganttnewline[ultra thick, red]
 
-	\ganttgroup{Algorithm Work}{2015-10-05}{2015-11-01} \\
+	\ganttgroup{Algorithm Work}{2015-10-05}{2015-11-15} \\
 	\ganttbar{Background Research}{2015-10-05}{2015-10-25} \\
 	\ganttbar{Algorithm Design}{2015-10-19}{2015-11-15} \\
 	\ganttbar{Algoritm Implementation}{2015-11-02}{2015-11-15}
@@ -126,14 +127,13 @@ compared to existing Service oriented Architecture approaches.
 
 	\ganttbar{Seminar Preparation}{2015-11-16}{2015-11-19} \\
 	\ganttlinkedmilestone{Progress Seminar 2}{2015-11-20} \\
+
+	\ganttbar{Report Writing}{2015-12-14}{2015-12-20}
+	\ganttbar{}{2015-12-28}{2015-12-30} \ganttnewline[ultra thick, red]
 	
 	\ganttbar{Algorithm Implementation}{2015-11-16}{2015-11-29} \\
 	\ganttbar{Testing and Evaluation}{2015-11-16}{2015-12-09} \\
-
-	\ganttmilestone{Target Completion}{2015-12-09} \\
-
-	\ganttbar{Report Writing}{2015-12-14}{2016-01-03}
-
+	\ganttmilestone{Target Completion}{2015-12-09}
 \end{ganttchart}
 
 \begin{ganttchart}[
