@@ -7,3 +7,5 @@
 *.ptc1
 *.gz
 *.toc
+*.out
+*.xwm
