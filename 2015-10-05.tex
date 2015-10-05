@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{minutes}
+\usepackage[letterpaper, margin=1in]{geometry}
+
+\pagestyle{plain}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\begin{document}
+\selectlanguage{english}
+
+\begin{Minutes}{Team Meeting 2}
+\participant{
+    Emily Shepherd,
+    Mohit Gupta,
+    Dan Playle,
+    Toby Finch,
+    Calin Pasat}
+\minutesdate{5 October 2015}
+\starttime{15:00}
+\endtime{15:40}
+\location{Zepler Level 3 Labs}
+\maketitle
+
+\topic{Project Brief}
+
+Emily presented the draft project brief and asked if anyone had any notes about the text -
+the group had none and it was unanimously approved.
+
+Emily then moved onto the Gantt chart section - she opened by suggesting that the ``Hardware Work''
+section seemed to be doing too much in the first few weeks to be realising. Dan agreed, and then pointed
+out that the movement study should also be pushed back, as it would not be possible to do this until
+after they had the sensors working.
+
+Emily then pointed out that a lot of the hardware work seemed to be
+taking place before the gantt chart showed the hardware being aquired. Mohit explained that he would be
+able to start the work before some of the parts arrived, and the time shown on the Gantt chart was
+worst case scenario if the vendors are slow. Dan said he was aware of a vendor who he believed could
+provide next day delivery, however Mohit pointed out that they would need to check that it was on the
+approved list. Emily suggested leaving the time to aquire hardware at a worst case scenario of two weeks
+and asked how long after this it would be ready for the movement study - Dan and Mohit both agreed that
+it could be ready a day after, albiet in a very rough state. Emily suggested leaving a weekend on the
+plan, which the team were happy with.
+
+Dan noted that he wasn't sure about the ``Develop Embedded Code'' section, and Emily suggested it simply
+be combined with ``Algorithm Implementation'' - Mohit explained he had kept the sections distinct to
+separate the code which deals with the sensors and the code which runs the algorithm, however Emily said
+she felt that the ``software'' could put together. Dan pointed out that it was very difficult to give
+an accurate timescale for many of the items until there was some research and data to guide the process, and
+Mohit and Toby agreed that the plan could change as the project went on.
+
+\topic{Ethical Approval}
+
+Both Emily and Toby had looked into this - Emily began by stating that she had created a submission on
+the ERGO website and filled out the first required form. Toby said that he believed that the study
+would be classified as ``intrusive'' which would require the team to use consent forms, which in turn
+would require a Data Protection Plan, as a signature counts as personal information. He then stated that
+the team would need to carefully plan the research as this would need to be submitted with the application.
+
+Dan asked if the participants would be used to verify that the device worked at the end of the project as
+well as collecting the movement data at the start - Emily said she had also considered this, but wasn't
+sure if there would be time. Calin and Toby stated that they thought it would be worth doing, and Toby
+suggested that it might be worth applying for if there is time - Mohit suggested adding it as a possible
+extension.
+
+Emily then suggested the team discuss exactly how the research would be carried out - Dan and Mohit pointed
+out that this would be difficult this early in the process, as they did not yet know how many sensors they
+would be able to aquire. After looking at the required excersises and confirming that the device would need
+to measure more than simply feet movement, Dan suggested simply asking the users to move the sensor to the
+active body part between excersises but Emily and Mohit both agreed that that would be both inconvenient. It
+was agreed to assess the buget and approve the project to decide how many sensors would be required.
+
+Emily then reminded the group that, as the research is to be ``intrusive'', a risk assessment would be
+required and asked the group to consider what possible risks there may be. The team identified the following
+issues:
+
+\begin{itemize}
+	\item Electrocution from wiring failure in the device or power line
+	\item Heat or fire from electrical issue
+	\item Constriction and blood flow disruption if device is too tight
+	\item As the initial version may be quite rough, it may not be self powered, causing a trip and choking hazard from dangling cables
+	\item Strains from the excersise
+		\begin{itemize}
+			\item Mohit suggested keeping a first aid kit on hand
+		\end{itemize}
+\end{itemize}
+
+Toby then pointed out that debrief form is also required which should include contact info, a way to thank
+participants and information for the candidates to access the results when complete. Calin asked how it
+would be possible to send the results to the participants if they are to be anonymous - Emily suggested
+simply giving a link which will contain the data once the results are available, they can then check
+themselves. Calin asked if it would be possible to simply ask if the participants if they would like to be
+contacted.
+
+Toby asked if ARM were funding the project, Emily confirmed that they aren't. Toby then pointed out that
+the ethics approval will take the group two weeks - Emily said she should update the Gantt chart to three
+weeks to reflect this, one for the team to complete the request, and two for the ethics committee to review
+it.
+
+\topic{Lab Desks}
+
+Mohit informed the group that each member of the team would need to fill out a risk assessment form to gain
+access to the lab. The group agreed to complete these at the end of the meeting and give these to Emily, who
+would bring them all to their next meeting with Dr Merrett to be countersigned.
+
+\topic{Git}
+
+Emily told the group she had created a git repository under her own GitHub account for minutes, but stated
+that the team would clearly need at least one more for code related items. She asked if the team were happy
+to continue using her account.
+
+Dan asked the team which branching strategy they prefered, and immediately expressed a preference for the
+use of feature branches. Emily and Mohit agreed strongly, Mohit stating that we should absolutely refrain
+from committing directly to the master branch. Dan added that, as such, we should not use fast forwards,
+which Emily agreed with.
+
+Calin noted that he had not used git before, but had signed up for an account on GitHub and had begun
+checking out how it works. Emily said she would be happy to give him a crash course, and Dan added that
+he was welcome to ask the whole team questions, which Mohit agreed with.
+
+\topic{Background Research}
+
+Emily pointed out that the gantt chart had background research starting this week and suggested starting
+by looking at Machine Learning in the context of exercise recognition, which Dan agreed with. Emily asked
+if the project would only use offline learning or if it would be feasbile to employ online learning on the
+device - Dan was not sure if this would be possible, however Mohit, Toby and Calin though that live learning
+would be an important aspect. Calin and Mohit both suggested that at least some form of calibration phase
+should be looked at. Emily theorised that the system could have a calibration phase once, which may require
+more power, but then could then go into a lower power ``usage phase'' for day normal usage.
+
+This prompted a discussion on the machine's memory - the specification had said 32kB would be availiable,
+however it had been assumed by the group that this would be volatile memory. It was unclear how much, if
+any, long term memory would be availible. Emily pointed out that, as the a proposed usecase was on planes,
+it would be sensible to have longer term memory in place, as it would not be practical to download the data
+during a flight.
+
+\end{Minutes}
+\end{document}
