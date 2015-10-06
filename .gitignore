@@ -9,3 +9,6 @@
 *.toc
 *.out
 *.xwm
+*.minAtt
+*.minDec
+*.minTsk
