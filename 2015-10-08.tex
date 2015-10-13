@@ -1,0 +1,197 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{minutes}
+\usepackage[letterpaper, margin=1in]{geometry}
+
+\pagestyle{plain}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\begin{document}
+\selectlanguage{english}
+
+\begin{Minutes}{Supervisor Meeting 2}
+\participant{\
+    Emily Shepherd, \
+    Mohit Gupta, \
+    Dan Playle, \
+    Toby Finch, \
+    Calin Pasat, \
+    Dr Geoff Merrett, \
+    Dr Alex Weddell}
+\minutesdate{8 October 2015}
+\starttime{13:00}
+\endtime{13:40}
+\location{59/4227}
+\maketitle
+
+\topic{Project Brief}
+Emily apologised for sending the latest draft of the brief so close to the meeting. Dr Merrett said
+he had not yet had a chance to go over it, so Emily went over the changes since the previous
+version; she stated that his points had all been accepted by the team, and explained that many of
+them they had been planning to do anyway, but agreed that the brief was too vague. She answered
+Dr Merrett's question [Note: Via email before the meeting, Dr Merrett had queried what the Brief
+meant when it referred to ``other Service Oriented Architectures"] stating that the team had meant
+algorithms running on unconstrained systems.
+
+Dr Merrett said he was happy with everything - his only note
+was that the brief said ``an algorithm... for execution on... [a] subthreshold device". He suggested
+adding ``suitable for" to make it clear that the team would not actually be working with the
+subthreshold device in question. Emily pointed out that Dan had made a change which she had not yet
+had a chance to see - Dan explained this was simply to add a reference to existing tools used for
+Machine Learning, such as Waka. The group were all happy with this. Dr Weddell had no issues, other
+than a typo he had noticed in the Gantt chart. Emily apologised and said she'd make sure to spell
+check it before submitting.
+
+Dr Merrett said that the brief should also be emailed to the client - Emily asked if he would like
+to be CCed on that, to which Dr Merrett replied that he would. Toby asked if the Gantt charts should
+also be sent over, but Dr Merrett said it would probably be better to do without those.
+
+\decision*{Add ``suitable for'' into the brief}
+\decision*{Accept Dan's change}
+\task{Toby}{Email the brief to the customer}
+
+\topic{Project Administration}
+Mohit asked about gaining access to the code required for the M0 - Dr Merrett stated that he should
+try signing up to ARM's site, although mentioned that there might be a single person who is signed
+up for the whole University who he should contact.
+
+Dr Merrett then asked how things had gone with the group so far for the week, and Toby responded
+that they had been working on the Ethics Approval. Emily mentioned that the plan is to complete
+the required forms this week, ready for the possible two weeks of processing time. Dr Merrett
+said that, in order to submit the request, the team would have to have a clear idea of what their
+testing would be - Toby said he had planned to write about the exercises, Emily added that testing
+non-exercise motions would be sensible too, to ensure the algorithm does not give false-positives.
+
+Dr Weddell asked to be reminded if the algorithm was aimed at inflight usage, and stated that that
+would add some convenient constraints on the requirements, as measuring activities such as walking
+up stairs may not be required. Dr Merrett pointed out that some planes do in fact have stairs,
+however the team accepted Dr Weddell's point - Emily added that movement due to turbulence may
+need to be considered.
+
+Dr Merrett also pointed out that there may be two phases of testing required: the first to obtain
+the data, and a second to verify that the system worked correctly. Emily said they had planned this
+but weren't sure if this should be submitted as separate requests - Dr Merrett stated that one
+request would be appropriate and informed the group that, while the ethics committee do require
+precision and detail in the application, if possible be as general as possible within those
+constraints.
+
+Emily briefly touched upon to topic of risk assessments - Dr Merrett suggested that allergies may
+be one as the device will involve skin contact. He suggested that using the device over clothes
+would be a sufficient way to avoid this risk.
+
+Mohit then reminded the group about Laboratory Risk assessments. Emily handed their completed
+risk statements to Dr Merrett who counter signed each of them. He asked why he only needed to sign
+one per team member, as other teams had given him more to sign. Emily stated that she believed
+copying the forms once signed would be fine which Dr Merrett accepted.
+
+\topic{Hardware}
+
+Emily brought up a topic of confusion for the group at their previous meeting\footnote
+{2015-05-05, Background Research, Paragraph 2}: the M0's long term memory capability.
+Dr Merrett was unsure what flash memory would be available and this may be something worth
+talking to the customer about. Dr Weddell looked up the M0 and found there were two versions:
+one with 256B of flash memory and 32kB of RAM, and a smaller unit with a total of 32kB flash
+and RAM, of which 8kB is RAM.
+
+\task{Toby}{Ask the customer about long term memory}
+
+\topic{Project Plan}
+Dr Merrett asked what the team's project plan was.
+
+\subtopic{Hardware}
+Emily started with hardware - she went over the contents of the Gantt chart, stating that they
+planned to spend the next week beginning the process of acquiring the required items, and they
+had planned to have a working system built just in time for the planned data collection week
+if the suppliers are slow.
+
+Dr Merrett asked if this plan implied the team were planning on using the
+device itself to collect the training data, which Emily confirmed. He suggested this was a
+poor strategy as it would be easier to simply use a fully working device to collect high
+precision data. Mohit stated that the formats may be different which could cause a problem,
+however Emily interjected that she believed that data conversion shouldn't be difficult,
+assuming both formats are adequately documented.
+
+\subtopic{Software}
+Emily then explained the software side of the project's planning, stating that the plan is
+to spend the next couple of weeks dealing with ``administration" tasks such as the ethics
+approval, quickly leading onto the research phase. She said the team had decided to research
+Machine Learning for recognising exercises on non constrained systems at first, followed by
+research into Machine Learning in general on constrained systems.
+
+She then said the next few weeks were dedicated to starting to develop an algorithm, first
+just in a high level language such as Java, both to help with planning the algorithm and to
+give the hardware side time to get the system working before work started. Finally, she said
+they would move into the embedded development of the team's chosen algorithm.
+
+Dr Merrett started that this course of action was sensible and asked if the research was going
+to focus on practical solutions or academic research. Emily responded that they had planned
+both, although she didn't have a strong response as they had not made a start on the literature
+at that point.
+
+\topic{Relevance of the FPGA}
+At this point Dr Weddell asked Dr Merrett why the original specification had specified an
+FPGA. Dr Merrett responded that this was to clock it slower, however Dr Weddell was not
+convinced this could not be achieved without the FPGA board. Dr Merrett said he could not
+remember the details, but he believed it to be more complex. He suggested asking the customer
+about it.
+
+\topic{Algorithm Idea}
+Dr Merrett asked if the team had any initial ideas about their approach to the algorithm. Emily
+responded that, due to her lack of experience with Machine Learning and she was not in a good
+position to make authoritative opening statements. Toby mentioned that Dan had been keen at
+Machine Learning. Dan stated that he had had a preliminary look into what was available,
+specifically Waka which he said he hadn't used before. He also said he had found a solution
+but that it was in Java.
+
+Dr Merrett said this was a good start, and gave some advice about Waka: he stated that it was
+a very useful and powerful tool, but it should not be used exclusively. That is, the team should
+not simply plug data into it and blindly accept the first thing it outputs.
+
+\topic{Immediate Plan}
+Dr Merrett asked for a more detailed look at the plan for the next two weeks. Emily stated that
+it was largely the administration tasks for a bit, but then the team would get stuck into
+research while the hardware side started on the development. Dr Merrett said this was good,
+although given the five person team, he would like to see at least one person doing something
+more practical early on, so that the team would have something solid to display at the first
+progress seminar.
+
+Dr Merrett then clarified that the team is classed as an ``EE" team for the purposes of the
+seminars, which means the later time slots would be used - Emily thanked him and stated that
+they had planned the earlier ones in the Gantt charts for safety but she would move them
+prior to submitting the brief. Dr Merrett then explained that the first progress seminar was
+a more general one, so there may not be any need to have too much done for it. For example,
+he stressed the importance of picking the best algorithm, rather than simply going for the
+first one the team found.
+
+\topic{Team Roles}
+Dr Merrett asked about team roles. Emily listed what these were\footnote
+{These were decided in the group meeting of 2015-09-30}; she stated that she had taken the
+position of leader and minute taker, Toby was the Company Representative, and Calin was the
+budget holder. Calin reminded the group that he was also in charge of acquiring the participants
+for the data study. Dr Merrett asked if this might make them feel obligated to take part, but
+Emily stated that they would have a formal consent form.
+
+Emily then explained their roles for the project work: she started with Calin and Mohit, who
+were in charge of developing the hardware. She then said that she and Toby were taking the
+lead for the research, that she, Toby and Dan were to be the main workers on coming up with
+the algorithm, and that she and Dan would be the primaries for the embedded programming work.
+
+Dr Merrett queried if this would mean the others would not contribute to other areas - Emily
+clarified that that was not at all the case; all members would contribute to everything and
+the roles she had just listed were merely the people who would head up each section of work.
+
+\topic{Next Meeting}
+Dr Merrett reminded the group that he would not be present next week. Emily apologised and
+stated that she would not be able to make the standard meeting slot next week due to a
+doctor's appointment. After some discussion, the group settled on 11:30 on Tuesday in
+Dr Weddell's office.
+
+Dr Merrett asked for a reminder of the standard meeting time for each week.
+
+\decision*{Next Meeting: 11:30, Tuesday 13 October 2015}
+\task{Emily}{Remind Dr Merrett of meetings}
+
+\end{Minutes}
+\end{document}
