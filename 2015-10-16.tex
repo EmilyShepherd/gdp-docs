@@ -1,0 +1,95 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{minutes}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{mathtools}
+
+\pagestyle{plain}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\begin{document}
+\selectlanguage{english}
+
+\begin{Minutes}{Initial Team Meeting}
+\participant{\
+    Emily Shepherd, \
+    Mohit Gupta, \
+    Dan Playle, \
+    Toby Finch, \
+    Calin Pasat,
+    Alex Weddell,
+    James Myres,
+    Rohan Gaddh}
+\minutesdate{16 October 2015}
+\starttime{15:00}
+\endtime{15:30}
+\location{59/4231}
+\maketitle
+
+\topic{Introductions}
+Dr Weddell started the call and began the meeting - he suggested that each member of the team introduce
+themselves. Dan began, stating that he would take the lead on Machine Learning. Calin then stated that he
+would be more involved in the hardware implementation side. Next, Emily introduced herself as the primary
+for the embedded implementation. Toby then said that he would be focusing on the abstract design of the
+algorithm. Finally, Mohit greeted the customer and informed him that he would also be managing the
+hardware side of the project.
+
+\topic{Project Plan}
+Emily began proceedings by asking James if he had seen the proposed project brief - James said that
+he had not, so Emily briefly went over it. James said that this sounded sensible and asked if the group
+were aware what ARM's particular interests were - Emily said that the team would like clarification on
+that so James explained that ARM were working on their subthreshold Cortex M0+ processor and briefly
+mentioned that this would mean reduced voltages (of around 1V) and reduced frequencies. He stated
+that any software, therefore, that was to be run on the device would need to be designed in the knowledge
+that it would have very few processessing cycles available to it and that the memory would be very small.
+He mentioned that, as a result of this, the systems they had built so far had tended to swap between
+collecting data and processing data, rather than processing data on the fly, as the processing ability
+was so low. Emily clarified that this mean that ARM's interests were to see what was the most the team
+could ``get away with'' running on the device, which James agreed with.
+
+Dr Weddell asked James to clarify what memory would be available - James responded that the system
+should ideally use between 8 and 12 kB, including code and data, if it is to feasibly be used on their
+subthreshold device - he said that if it had to go higher, it could still be used on emulators but there
+would be no way to test this on the real device. Emily stated, therefore, that the team would use 8 kB
+as a ``reasonably hard'' cut off point.
+
+\topic{Testing Platform}
+Dr Weddell asked if it would be sensible to work on the board itself, or resort to emulation. James
+stated that a board may be able to made available to the group, and that there were some people in
+Southampton with the required knowledge to work with it, but this was not essential and it would
+make more sense to emulate the platform during development. He said they would think about making a
+board available if the algorithm worked well - Emily summarised this as a possibility but not a
+requirement for the group's aims.
+
+Dr Weddell then asked about the team's proposed plan of using an FPGA board, stating that he was not
+sure if this was necessary. James responded that he was not sure but he suspected it was a sensible
+way of proceeding. Dr Weddell mentioned the possibility of using an M1, Mohit stated this would not
+be helpful for the group and mentioned that he had been looking at DesignStart. James agreed with
+Mohit and suggested that the mBed M0 would be a feasible possibility. Mohit said he had looked into
+this, although the team were unsure on it as the data sheet listed a 40\% error.
+
+Rohan suggested using both the mBed M0 and the FPGA - the team agreed with this. Dr Weddell asked if
+James would be able to make an mBed M0 available to the team, to which he responded that one would
+need to be purchased. Calin confirmed that the budget could handle this.
+
+\task*{Order mBed M0}
+
+\topic{Accelerometers}
+Dr Weddell asked about the accelerometers and stated that he assumed these would not need to be under
+the same power constraint. James confirmed that he was unaware of any low-power sensors.
+
+\topic{Progress Seminars}
+Dr Weddell suggested the possibility of inviting James and Rohan to the progress Seminars. After some
+discussion, it was decided that Rohan would not be able to make either of the dates, however James
+may be free for the second progress seminar.
+
+\topic{Ongoing Contact}
+Dr Weddell asked if ongoing contact would be appropriate - and how the team could ask any questions if
+required. James stated that it would probably be better to remain in contact with Rohan.
+
+\decision*{Use Rohan as the point of contact}
+
+\end{Minutes}
+\end{document}
