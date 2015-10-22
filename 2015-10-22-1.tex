@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage{minutes}
+\usepackage[letterpaper, margin=1in]{geometry}
+
+\pagestyle{plain}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\begin{document}
+\selectlanguage{english}
+
+\begin{Minutes}{Team Meeting 4}
+\participant{\
+    Emily Shepherd, \
+    Mohit Gupta, \
+    Dan Playle, \
+    Toby Finch, \
+    Calin Pasat}
+\minutesdate{22 October 2015}
+\starttime{13:00}
+\endtime{15:00}
+\location{Zepler Level 3 Labs}
+\maketitle
+
+Dan talked about his classification algorithm:
+MLP
+
+Hardware limitations:
+	No floating point
+	32bit
+	No hardware devide
+	No clamping (Emily said this would be fine)
+
+Dan suggested using MLP with scaled up ints - Mohit pointed out that the sensor would give data in
+in the form of floats.
+
+\end{Minutes}
+\end{document}
