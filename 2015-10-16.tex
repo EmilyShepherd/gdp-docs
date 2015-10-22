@@ -41,7 +41,7 @@ Emily began proceedings by asking James if he had seen the proposed project brie
 he had not, so Emily briefly went over it. James said that this sounded sensible and asked if the group
 were aware what ARM's particular interests were - Emily said that the team would like clarification on
 that so James explained that ARM were working on their subthreshold Cortex M0+ processor and briefly
-mentioned that this would mean reduced voltages (of around 1.2V) and reduced frequencies. He stated
+mentioned that this would mean reduced voltages (of around 1V) and reduced frequencies. He stated
 that any software, therefore, that was to be run on the device would need to be designed in the knowledge
 that it would have very few processessing cycles available to it and that the memory would be very small.
 He mentioned that, as a result of this, the systems they had built so far had tended to swap between
@@ -52,7 +52,7 @@ could ``get away with'' running on the device, which James agreed with.
 Dr Weddell asked James to clarify what memory would be available - James responded that the system
 should ideally use between 8 and 12 kB, including code and data, if it is to feasibly be used on their
 subthreshold device - he said that if it had to go higher, it could still be used on emulators but there
-would be no way to test this on the real device. Emily stated, therefore, that the team would use 12kB
+would be no way to test this on the real device. Emily stated, therefore, that the team would use 8 kB
 as a ``reasonably hard'' cut off point.
 
 \topic{Testing Platform}
@@ -67,14 +67,14 @@ Dr Weddell then asked about the team's proposed plan of using an FPGA board, sta
 sure if this was necessary. James responded that he was not sure but he suspected it was a sensible
 way of proceeding. Dr Weddell mentioned the possibility of using an M1, Mohit stated this would not
 be helpful for the group and mentioned that he had been looking at DesignStart. James agreed with
-Mohit and suggested that the embed M0 would be a feasible possibility. Mohit said he had looked into
+Mohit and suggested that the mBed M0 would be a feasible possibility. Mohit said he had looked into
 this, although the team were unsure on it as the data sheet listed a 40\% error.
 
-Rohan suggested using both the Embed M0 and the FPGA - the team agreed with this. Dr Weddell asked if
-James would be able to make an Embed M0 available to the team, to which he responded that one would
+Rohan suggested using both the mBed M0 and the FPGA - the team agreed with this. Dr Weddell asked if
+James would be able to make an mBed M0 available to the team, to which he responded that one would
 need to be purchased. Calin confirmed that the budget could handle this.
 
-\task*{Order Embed M0}
+\task*{Order mBed M0}
 
 \topic{Accelerometers}
 Dr Weddell asked about the accelerometers and stated that he assumed these would not need to be under
