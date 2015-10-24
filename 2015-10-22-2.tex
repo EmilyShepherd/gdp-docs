@@ -25,5 +25,29 @@
 \location{59/4231}
 \maketitle
 
+\topic{Machine Learning}
+Dan opened by going over his progress - he described how he'd used a sample size of around 400 x, y and z values to investigate which classifiers were best and matching various movements and stated that he had found two algorithms, giving 95\% accuracy.
+Dr Weddell asked about the implication of having 95\% accuracy. Dan responded that 95\% was very good for initial tests using samples from only one person - he said he was confident that with added heuristics and a greater sample size, this could be pushed closer to 100\%.
+
+Dr Weddell asked where the sensor had been placed on Dan's body - to which he responded that it had been his foot. Dr Weddell then asked if all exercises were based around the foot. Calin responded that they were not, and went over all of the exercises that had been recommended by Virgin Airways.
+Emily stated that the team were currently thinking of focusing on the foot, and would add support for other excercises if time permits.
+
+Dr Weddell then asked which classifiers Dan had found - Dan said that the most accurate had been from a MultiLayer Perceptron or an RBF Network, both of which gave similar results.
+Dr Weddell asked how these would be processed on the device. Mohit responded that the Cortex M0 and M0+ models do not have hardware support for floating point arithmetic, and that this would cause issues as both algorithms normally use decimal values.
+Emily stated that the software team had had a brief discussion about how to overcome this, and that they were confident that it could be done, but the team had not made any solid decisions as of yet.
+
+\topic{Sensor}
+
+Dr Weddell asked if the team had thoughts on using an accelerometer or a gyroscope. Dan replied that he had experienced far more noise with the accelerometer, and as such was in favour of using a gyroscope.
+Dr Weddell expressed surprise at this and suggested moving the phone on the foot, to test of that gave better results with the accelerometer.
+
+Mohit stated he had been looking to buy accelerometers - Dr Weddell suggested Service Mount but Mohit responded that he had not been impressed by these as they typically required up to 5V, which was not ideal.
+
+Dr Weddell asked where the team had been looking for hardware, and suggested ActiveRobots. Mohit replied that the team would ideally like a sensor which includes both an accelerometer and a gyroscope and that he and Calin had found such a device (which also, incidentally, provides temperature data) on Amazon. Dr Weddell stated that it is possible to buy items from Amazon and attempt to reclaim the money, however he was not able to guarantee the finance department would agree to this.
+The team agreed to buy the device, as the cost was low enough that the personal risk was deemed acceptable.
+
+\task{Calin}{Investigate acquiring a sensor from ActiveRobots}
+\decision*{Buy Sensor from Amazon}
+
 \end{Minutes}
 \end{document}
