@@ -24,17 +24,31 @@
 \location{Zepler Level 3 Labs}
 \maketitle
 
-Dan talked about his classification algorithm:
-MLP
+\topic{Machine Learning Development}
 
-Hardware limitations:
-	No floating point
-	32bit
-	No hardware devide
-	No clamping (Emily said this would be fine)
+Dan started the meeting by presenting the research he had done into the Machine Learning aspect of the algorithm. He presented a graph of x, y and z coordinates, and showed Waka's confusion matrix with two of the best classifiers that it had found: MultiLayer Perception and RBF Networks.
+He pointed out that both of these gave approximately the same results as each other: about 90\% accuracy at classifying peaks, troughs, noise, stair peaks and walking peaks. As the final algorithm does not need to tell the difference between noise, stair peaks and walking peaks, this equates to a 95\% effective accuracy.
 
-Dan suggested using MLP with scaled up ints - Mohit pointed out that the sensor would give data in
-in the form of floats.
+\topic{Embedded Machine Learning}
+Emily informed the team that she had had less success, stating that the team's original plan of using exclusively offline learning was most sensible, as she could not find many cases where it could be scaled down effectively onto a constrained system.
+
+\topic{Hardware Limitations}
+
+Mohit presented his findings about the Cortex M0 and Cortex M0+'s hardware limitations:
+\begin{itemize}
+	\item No hardware floating point support what-so-ever
+	\item Only capabile of 32bit arithmetic
+	\item No hardware divide
+	\item No clamping to prevent overflows during arithmetic - Emily said that this would not cause the developers too much trouble to mitigate.
+\end{itemize}
+
+The lack of floating point support caused some concern as both proposed classifiers, MLP and RBF Networks, require decimal arthimatic. Dan queried the feasibility of using a software floating point library.
+Mohit responded that such libraries were available to the team, however single point precision would require up to 100 cycles per calculation, and double precision requires up to 1000 cycles or more.
+Emily stated that this was unacceptably prohibitive, to which the team agreed. Dan suggested that it may be possible to develop an MLP implementation which uses scaled up decimals, such that everything becomes integers.
+Emily suggested the possibility of creating the possibility of developing some form of fixed point system, or an algorithm-aware semi-floating point implementation. Dan agreed that this would be feasible.
+
+\task{Dan}{Investigate Integer MLP}
+\task{Emily}{Investigate basic decimal implementation}
 
 \end{Minutes}
 \end{document}
