@@ -1,0 +1,24 @@
+5th Jan GDP Meeting
+
+Selected parameters to use with the algorithm
+
+Emiliy has got the algorithm to compile
+
+Next tasks are to get it working on the device and then test it with the user studies. Will need to interface between
+the model and the hardware so we can flash an LED when it detects exercise being performed.
+Additionally, get a structure for the report, plan who is doing each section. Focus on report in last week. Get the device working ASAP.
+
+As with the tradeoffs, we seem to be using about 10Hz samping frequency
+Also we have decided on the window size
+
+
+We have the system clock controlled on the mBed device and have the sensors working on there now
+
+
+Remotely work with Emiliy while she is away
+
+
+Also get a plan done this week, email progress next week
+
+
+Next meeting on the 18th at 2pm
